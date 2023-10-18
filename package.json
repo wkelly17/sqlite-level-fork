@@ -37,7 +37,8 @@
     "version": "pnpm exec changeset version",
     "version:snapshot": "pnpm exec changeset version --snapshot",
     "publish": "npm publish -r --no-git-checks --access public",
-    "publish:beta": "npm publish -r --tag beta --no-git-checks --access public"
+    "publish:beta": "npm publish -r --tag beta --no-git-checks --access public",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@libsql/client": "^0.3.5",
