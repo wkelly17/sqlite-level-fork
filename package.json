@@ -56,6 +56,14 @@
     "ts-jest": "^29.0.3",
     "typescript": "^4.9.3"
   },
+  "optionalDependencies": {
+    "@libsql/darwin-arm64": "0.1.25",
+    "@libsql/darwin-x64": "0.1.25",
+    "@libsql/linux-arm64-gnu": "0.1.25",
+    "@libsql/linux-x64-gnu": "0.1.25",
+    "@libsql/linux-x64-musl": "0.1.25",
+    "@libsql/win32-x64-msvc": "0.1.25"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   }
