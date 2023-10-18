@@ -21,7 +21,8 @@ import {
 import {NextCallback} from "abstract-level/types/abstract-iterator";
 import ModuleError from "module-error";
 import Database from "better-sqlite3";
-import {createClient} from "@libsql/client/web";
+// import {createClient} from "@libsql/client/web";
+import {createClient} from "@libsql/client";
 
 export type SqliteLevelOptions<K, V> = {
   filename: string;
@@ -215,7 +216,10 @@ export class SqliteLevel<
   constructor(options: SqliteLevelOptions<KDefault, VDefault>) {
     const encodings = {utf8: true};
     super({encodings}, options);
-    this.db = createClient({url: options.filename});
+    this.db = createClient({
+      url: options.filename,
+      intMode: "number",
+    });
     // this.db = new Database(options.filename)
     this.db.pragma("journal_mode = WAL");
     if (options.readOnly !== undefined) {
