@@ -40,15 +40,16 @@
     "publish:beta": "npm publish -r --tag beta --no-git-checks --access public"
   },
   "dependencies": {
-    "module-error": "^1.0.2",
+    "@libsql/client": "^0.3.5",
     "abstract-level": "^1.0.3",
-    "better-sqlite3": "^8.4.0"
+    "better-sqlite3": "^8.4.0",
+    "module-error": "^1.0.2"
   },
   "devDependencies": {
+    "@changesets/cli": "2.26.1",
     "@tinacms/scripts": "^1.0.0",
     "@types/better-sqlite3": "^7.6.4",
     "@types/jest": "^29.2.4",
-    "@changesets/cli": "2.26.1",
     "jest": "^29.2.4",
     "jest-environment-node": "^29.2.2",
     "ts-jest": "^29.0.3",
